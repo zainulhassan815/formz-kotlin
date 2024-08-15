@@ -6,53 +6,6 @@ package org.crakcode.formz
  *
  * @param value The value of the given [FormInput].
  * @param isPure If the [FormInput] is pure (has been touched/modified).
- *
- * ```kotlin
- * // PasswordField.kt
- *
- * enum class PasswordError {
- *     Empty,
- *     TooShort
- * }
- *
- * // Password Input Field
- * class Password(
- *     value: String,
- *     isPure: Boolean = true
- * ) : FormInput<String, PasswordError>(value, isPure) {
- *     override fun validator(value: String): PasswordError? = when {
- *         value.isBlank() -> PasswordError.Empty
- *         value.length < 8 -> PasswordError.TooShort
- *         else -> null
- *     }
- * }
- * ```
- *
- * ```kotlin
- * // ViewModel.kt
- *
- * data class LoginFormState(
- *     val email: Email = Email(""),
- *     val password: Password = Password(""),
- *     val submissionStatus: FormSubmissionStatus = FormSubmissionStatus.Initial
- * ) : Form {
- *     override val inputs = listOf(email, password)
- * }
- *
- * class ViewModel {
- *     private val _state = MutableStateFlow(LoginFormState())
- *     val state: StateFlow<LoginFormState> = _state
- *
- *     fun updatePassword(password: String) {
- *         viewModelScope.launch {
- *             // Set `isPure` to false when updating field value to indicate
- *             // that field has been modified.
- *             _state.update { it.copy(password = Password(password, false)) }
- *         }
- *     }
- * }
- * ```
- *
  */
 public abstract class FormInput<T, E>(
     public val value: T,
@@ -116,25 +69,6 @@ public abstract class FormInput<T, E>(
  *
  * @param value The value of the given [FormInput].
  * @param isPure If the [FormInput] is pure (has been touched/modified).
- *
- * ```kotlin
- * enum class EmailError {
- *     Empty,
- *     Invalid
- * }
- *
- * class Email(
- *     value: String,
- *     isPure: Boolean = true
- * ) : CachedFormInput<String, EmailError>(value, isPure) {
- *     override fun validator(value: String): EmailError? = when {
- *         value.isBlank() -> EmailError.Empty
- *         // Using Regex to validate email address
- *         !PatternsCompat.EMAIL_ADDRESS.matcher(value).matches() -> EmailError.Invalid
- *         else -> null
- *     }
- * }
- * ```
  */
 public abstract class CachedFormInput<T, E>(
     value: T,
