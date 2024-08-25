@@ -8,7 +8,7 @@ public interface Form {
     /**
      * Returns all [FormInput] instances.
      *
-     * Override this and give it all [FormInput]s in your class that should be
+     * Implement this and give it all [FormInput]s in your class that should be
      * validated automatically.
      */
     public val inputs: List<FormInput<*, *>>
@@ -16,7 +16,7 @@ public interface Form {
     /**
      * Returns true if all [FormInput] values are valid.
      */
-    public val isValid: Boolean get() = inputs.validate()
+    public val isValid: Boolean get() = inputs.valid()
 
     /**
      * Returns true if any of the [FormInput] values is not valid.
@@ -24,22 +24,22 @@ public interface Form {
     public val isNotValid: Boolean get() = !isValid
 
     /**
-     * Returns true if all the [FormInput] values are pure.
+     * Returns true if all the [FormInput] values have not been modified.
      */
-    public val isPure: Boolean get() = inputs.isPure()
+    public val isPristine: Boolean get() = inputs.isPristine()
 
     /**
      * Returns true if any of the [FormInput] values is modified.
      */
-    public val isDirty: Boolean get() = !isPure
+    public val isDirty: Boolean get() = !isPristine
 }
 
 /**
  * Returns true if all the [FormInput]s are valid.
  */
-public fun List<FormInput<*, *>>.validate(): Boolean = all { it.isValid }
+public fun List<FormInput<*, *>>.valid(): Boolean = all { it.isValid }
 
 /**
- * Returns true if all the [FormInput]s are pure.
+ * Returns true if all the [FormInput]s have not been modified.
  */
-public fun List<FormInput<*, *>>.isPure(): Boolean = all { it.isPure }
+public fun List<FormInput<*, *>>.isPristine(): Boolean = all { it.isPristine }

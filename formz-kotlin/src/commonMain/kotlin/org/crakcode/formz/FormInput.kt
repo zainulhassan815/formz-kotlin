@@ -5,11 +5,11 @@ package org.crakcode.formz
  * It contains information about the [value] as well as validity.
  *
  * @param value The value of the given [FormInput].
- * @param isPure If the [FormInput] is pure (has been touched/modified).
+ * @param isPristine If the [FormInput] has not been modified.
  */
 public abstract class FormInput<T, E>(
     public val value: T,
-    public val isPure: Boolean = true
+    public val isPristine: Boolean = true
 ) {
     /**
      * A function that must return a validation error if the provided
@@ -43,21 +43,21 @@ public abstract class FormInput<T, E>(
      * The error to display if the [FormInput] value
      * is not valid and has been modified.
      */
-    public open val displayError: E? get() = if (isPure) null else error
+    public open val displayError: E? get() = if (isPristine) null else error
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
         if (other !is FormInput<*, *>) return false
 
         if (value != other.value) return false
-        if (isPure != other.isPure) return false
+        if (isPristine != other.isPristine) return false
 
         return true
     }
 
     override fun hashCode(): Int {
         var result = value?.hashCode() ?: 0
-        result = 31 * result + isPure.hashCode()
+        result = 31 * result + isPristine.hashCode()
         return result
     }
 }
@@ -68,12 +68,12 @@ public abstract class FormInput<T, E>(
  * used, such as those involving regular expressions.
  *
  * @param value The value of the given [FormInput].
- * @param isPure If the [FormInput] is pure (has been touched/modified).
+ * @param isPristine If the [FormInput] has not been modified.
  */
 public abstract class CachedFormInput<T, E>(
     value: T,
-    isPure: Boolean = true
-) : FormInput<T, E>(value, isPure) {
+    isPristine: Boolean = true
+) : FormInput<T, E>(value, isPristine) {
     private val cachedError by lazy { validator(value) }
     override val error: E? get() = cachedError
     override val isValid: Boolean get() = cachedError == null

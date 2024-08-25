@@ -55,7 +55,7 @@ class FormTest {
             name = StringFormInput("John Doe"),
             email = StringFormInput("john@example.com")
         )
-        assertTrue(form.isPure)
+        assertTrue(form.isPristine)
     }
 
     @Test
@@ -64,7 +64,7 @@ class FormTest {
             name = StringFormInput("John Doe", isPure = false),
             email = StringFormInput("john@example.com")
         )
-        assertFalse(form.isPure)
+        assertFalse(form.isPristine)
     }
 
     @Test
