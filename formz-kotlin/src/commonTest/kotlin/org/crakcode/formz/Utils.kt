@@ -6,8 +6,8 @@ enum class ValidationError {
 
 class StringFormInput(
     value: String,
-    isPure: Boolean = true
-) : FormInput<String, ValidationError>(value, isPure) {
+    isPristine: Boolean = true
+) : FormInput<String, ValidationError>(value, isPristine) {
     override fun validator(value: String): ValidationError? = when {
         value.isBlank() -> ValidationError.Blank
         else -> null
@@ -16,8 +16,8 @@ class StringFormInput(
 
 class CachedStringFormInput(
     value: String,
-    isPure: Boolean = true
-) : CachedFormInput<String, ValidationError>(value, isPure) {
+    isPristine: Boolean = true
+) : CachedFormInput<String, ValidationError>(value, isPristine) {
     override fun validator(value: String): ValidationError? = when {
         value.isBlank() -> ValidationError.Blank
         else -> null

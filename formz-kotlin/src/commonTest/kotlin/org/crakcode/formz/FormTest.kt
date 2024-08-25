@@ -50,7 +50,7 @@ class FormTest {
     }
 
     @Test
-    fun `isPure returns true when all FormInputs are pure`() {
+    fun `isPristine returns true when all FormInputs are pristine`() {
         val form = SignupFormState(
             name = StringFormInput("John Doe"),
             email = StringFormInput("john@example.com")
@@ -59,25 +59,25 @@ class FormTest {
     }
 
     @Test
-    fun `isPure returns false when any FormInput is not pure`() {
+    fun `isPristine returns false when any FormInput is not pristine`() {
         val form = SignupFormState(
-            name = StringFormInput("John Doe", isPure = false),
+            name = StringFormInput("John Doe", isPristine = false),
             email = StringFormInput("john@example.com")
         )
         assertFalse(form.isPristine)
     }
 
     @Test
-    fun `isDirty returns true when any FormInput is not pure`() {
+    fun `isNotPristine returns true when any FormInput is not pristine`() {
         val form = SignupFormState(
-            name = StringFormInput("John Doe", isPure = false),
+            name = StringFormInput("John Doe", isPristine = false),
             email = StringFormInput("john@example.com")
         )
         assertTrue(form.isDirty)
     }
 
     @Test
-    fun `isDirty returns false when all FormInputs are pure`() {
+    fun `isNotPristine returns false when all FormInputs are pristine`() {
         val form = SignupFormState(
             name = StringFormInput("John Doe"),
             email = StringFormInput("john@example.com")

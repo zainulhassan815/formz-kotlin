@@ -30,29 +30,29 @@ class CachedFormInputTest {
 
     @Test
     fun `equals returns true for identical inputs`() {
-        val input1 = CachedStringFormInput("Test", isPure = false)
-        val input2 = CachedStringFormInput("Test", isPure = false)
+        val input1 = CachedStringFormInput("Test", isPristine = false)
+        val input2 = CachedStringFormInput("Test", isPristine = false)
         assertEquals(input1, input2)
     }
 
     @Test
     fun `equals returns false for different inputs`() {
-        val input1 = CachedStringFormInput("Test1", isPure = false)
-        val input2 = CachedStringFormInput("Test2", isPure = false)
+        val input1 = CachedStringFormInput("Test1", isPristine = false)
+        val input2 = CachedStringFormInput("Test2", isPristine = false)
         assertNotEquals(input1, input2)
     }
 
     @Test
     fun `hashCode returns same value for identical inputs`() {
-        val input1 = CachedStringFormInput("Test", isPure = false)
-        val input2 = CachedStringFormInput("Test", isPure = false)
+        val input1 = CachedStringFormInput("Test", isPristine = false)
+        val input2 = CachedStringFormInput("Test", isPristine = false)
         assertEquals(input1.hashCode(), input2.hashCode())
     }
 
     @Test
     fun `hashCode returns different values for different inputs`() {
-        val input1 = CachedStringFormInput("Test1", isPure = false)
-        val input2 = CachedStringFormInput("Test2", isPure = false)
+        val input1 = CachedStringFormInput("Test1", isPristine = false)
+        val input2 = CachedStringFormInput("Test2", isPristine = false)
         assertNotEquals(input1.hashCode(), input2.hashCode())
     }
 }
