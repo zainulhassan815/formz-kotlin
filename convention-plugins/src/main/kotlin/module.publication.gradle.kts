@@ -18,26 +18,26 @@ publishing {
 
         // Provide artifacts information required by Maven Central
         pom {
-            name.set("Kotlin Multiplatform library template")
-            description.set("Dummy library to test deployment to Maven Central")
-            url.set("https://github.com/Kotlin/multiplatform-library-template")
+            name.set("Formz Kotlin")
+            description.set("A Multiplatform Form Validation Library")
+            url.set("https://github.com/zainulhassan815/formz-kotlin")
 
             licenses {
                 license {
-                    name.set("MIT")
-                    url.set("https://opensource.org/licenses/MIT")
+                    name.set("Apache License")
+                    url.set("https://opensource.org/license/apache-2-0")
                 }
             }
             developers {
                 developer {
-                    id.set("JetBrains")
-                    name.set("JetBrains Team")
-                    organization.set("JetBrains")
-                    organizationUrl.set("https://www.jetbrains.com")
+                    id.set("zainulhassan815")
+                    name.set("Zain Ul Hassan")
+                    url.set("https://github.com/zainulhassan815")
+                    email.set("zainulhassan4330@gmail.com")
                 }
             }
             scm {
-                url.set("https://github.com/Kotlin/multiplatform-library-template")
+                url.set("https://github.com/zainulhassan815/formz-kotlin")
             }
         }
     }
