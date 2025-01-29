@@ -1,12 +1,16 @@
+import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
-    id("module.publication")
     alias(libs.plugins.dokka)
+    alias(libs.plugins.vanniktech.mavenPublish)
 }
+
+group = "io.github.zainulhassan815"
+version = "1.0.0-alpha"
 
 kotlin {
     explicitApi()
@@ -43,4 +47,34 @@ android {
 
 tasks.dokkaHtml {
     outputDirectory.set(rootProject.layout.projectDirectory.dir("docs"))
+}
+
+mavenPublishing {
+    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+    signAllPublications()
+    coordinates(group.toString(), "formz", version.toString())
+
+    pom {
+        name = "Formz Kotlin"
+        description = "A Multiplatform Form Validation Library"
+        url = "https://github.com/zainulhassan815/formz-kotlin"
+
+        licenses {
+            license {
+                name = "Apache License"
+                url = "https://opensource.org/license/apache-2-0"
+            }
+        }
+        developers {
+            developer {
+                id = "zainulhassan815"
+                name = "Zain Ul Hassan"
+                url = "https://github.com/zainulhassan815"
+                email = "zainulhassan4330@gmail.com"
+            }
+        }
+        scm {
+            url = "https://github.com/zainulhassan815/formz-kotlin"
+        }
+    }
 }
