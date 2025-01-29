@@ -1,0 +1,43 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:org.dreamerslab.formz////PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/index.html
+$dokka.location:org.dreamerslab.formz//isCanceled/org.dreamerslab.formz.FormSubmissionStatus#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/is-canceled.html
+$dokka.location:org.dreamerslab.formz//isFailure/org.dreamerslab.formz.FormSubmissionStatus#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/is-failure.html
+$dokka.location:org.dreamerslab.formz//isInProgress/org.dreamerslab.formz.FormSubmissionStatus#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/is-in-progress.html
+$dokka.location:org.dreamerslab.formz//isInProgressOrSuccess/org.dreamerslab.formz.FormSubmissionStatus#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/is-in-progress-or-success.html
+$dokka.location:org.dreamerslab.formz//isInitial/org.dreamerslab.formz.FormSubmissionStatus#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/is-initial.html
+$dokka.location:org.dreamerslab.formz//isPristine/kotlin.collections.List[org.dreamerslab.formz.FormInput[*,*]]#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/is-pristine.html
+$dokka.location:org.dreamerslab.formz//isSuccess/org.dreamerslab.formz.FormSubmissionStatus#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/is-success.html
+$dokka.location:org.dreamerslab.formz//valid/kotlin.collections.List[org.dreamerslab.formz.FormInput[*,*]]#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/valid.html
+$dokka.location:org.dreamerslab.formz/CachedFormInput///PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-cached-form-input/index.html
+$dokka.location:org.dreamerslab.formz/CachedFormInput/CachedFormInput/#TypeParam(bounds=[kotlin.Any?])#kotlin.Boolean/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-cached-form-input/-cached-form-input.html
+$dokka.location:org.dreamerslab.formz/CachedFormInput/error/#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-cached-form-input/error.html
+$dokka.location:org.dreamerslab.formz/CachedFormInput/isValid/#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-cached-form-input/is-valid.html
+$dokka.location:org.dreamerslab.formz/Form///PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-form/index.html
+$dokka.location:org.dreamerslab.formz/Form/inputs/#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-form/inputs.html
+$dokka.location:org.dreamerslab.formz/Form/isDirty/#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-form/is-dirty.html
+$dokka.location:org.dreamerslab.formz/Form/isNotValid/#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-form/is-not-valid.html
+$dokka.location:org.dreamerslab.formz/Form/isPristine/#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-form/is-pristine.html
+$dokka.location:org.dreamerslab.formz/Form/isValid/#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-form/is-valid.html
+$dokka.location:org.dreamerslab.formz/FormInput///PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-form-input/index.html
+$dokka.location:org.dreamerslab.formz/FormInput/FormInput/#TypeParam(bounds=[kotlin.Any?])#kotlin.Boolean/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-form-input/-form-input.html
+$dokka.location:org.dreamerslab.formz/FormInput/displayError/#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-form-input/display-error.html
+$dokka.location:org.dreamerslab.formz/FormInput/equals/#kotlin.Any?/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-form-input/equals.html
+$dokka.location:org.dreamerslab.formz/FormInput/error/#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-form-input/error.html
+$dokka.location:org.dreamerslab.formz/FormInput/hashCode/#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-form-input/hash-code.html
+$dokka.location:org.dreamerslab.formz/FormInput/isNotValid/#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-form-input/is-not-valid.html
+$dokka.location:org.dreamerslab.formz/FormInput/isPristine/#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-form-input/is-pristine.html
+$dokka.location:org.dreamerslab.formz/FormInput/isValid/#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-form-input/is-valid.html
+$dokka.location:org.dreamerslab.formz/FormInput/validator/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-form-input/validator.html
+$dokka.location:org.dreamerslab.formz/FormInput/value/#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-form-input/value.html
+$dokka.location:org.dreamerslab.formz/FormSubmissionStatus.Canceled///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}formz-kotlin/org.dreamerslab.formz/-form-submission-status/-canceled/index.html
+$dokka.location:org.dreamerslab.formz/FormSubmissionStatus.Failure///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}formz-kotlin/org.dreamerslab.formz/-form-submission-status/-failure/index.html
+$dokka.location:org.dreamerslab.formz/FormSubmissionStatus.InProgress///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}formz-kotlin/org.dreamerslab.formz/-form-submission-status/-in-progress/index.html
+$dokka.location:org.dreamerslab.formz/FormSubmissionStatus.Initial///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}formz-kotlin/org.dreamerslab.formz/-form-submission-status/-initial/index.html
+$dokka.location:org.dreamerslab.formz/FormSubmissionStatus.Success///PointingToDeclaration/{"org.jetbrains.dokka.links.EnumEntryDRIExtra":{"key":"org.jetbrains.dokka.links.EnumEntryDRIExtra"}}formz-kotlin/org.dreamerslab.formz/-form-submission-status/-success/index.html
+$dokka.location:org.dreamerslab.formz/FormSubmissionStatus///PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-form-submission-status/index.html
+$dokka.location:org.dreamerslab.formz/FormSubmissionStatus/entries/#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-form-submission-status/entries.html
+$dokka.location:org.dreamerslab.formz/FormSubmissionStatus/valueOf/#kotlin.String/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-form-submission-status/value-of.html
+$dokka.location:org.dreamerslab.formz/FormSubmissionStatus/values/#/PointingToDeclaration/formz-kotlin/org.dreamerslab.formz/-form-submission-status/values.html
+org.dreamerslab.formz
+
