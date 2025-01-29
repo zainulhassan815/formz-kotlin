@@ -3,6 +3,18 @@ package org.crakcode.formz
 /**
  * An interface that automatically handles validation of all
  * [FormInput]s present in the [inputs].
+ *
+ * ```kotlin
+ * // Sample Usage
+ * data class SignupFormState(
+ *     val name: Name = Name(""),
+ *     val email: Email = Email(""),
+ *     val password: Password = Password(""),
+ *     val submissionStatus: FormSubmissionStatus = FormSubmissionStatus.Initial
+ * ) : Form {
+ *     override val inputs = listOf(name, email, password)
+ * }
+ * ```
  */
 public interface Form {
     /**
