@@ -1,4 +1,4 @@
-package org.crakcode.formz
+package org.dreamerslab.formz
 
 /**
  * Enum representing the submission status of a form.

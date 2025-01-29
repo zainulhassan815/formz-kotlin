@@ -34,9 +34,13 @@ kotlin {
 }
 
 android {
-    namespace = "org.crakcode.formz"
+    namespace = "org.dreamerslab.formz"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
     defaultConfig {
         minSdk = libs.versions.android.minSdk.get().toInt()
     }
+}
+
+tasks.dokkaHtml {
+    outputDirectory.set(rootProject.layout.projectDirectory.dir("docs"))
 }

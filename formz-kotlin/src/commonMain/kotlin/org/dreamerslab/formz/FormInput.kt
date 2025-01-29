@@ -1,4 +1,4 @@
-package org.crakcode.formz
+package org.dreamerslab.formz
 
 /**
  * A [FormInput] represents the value of a single form input field.
