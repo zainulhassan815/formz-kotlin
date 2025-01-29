@@ -1,7 +1,6 @@
 name: Publish
 on:
-  release:
-    types: [released, prereleased]
+  workflow_call:
 jobs:
   publish:
     name: Release build and publish
