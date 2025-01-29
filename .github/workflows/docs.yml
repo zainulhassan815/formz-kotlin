@@ -8,7 +8,7 @@ on:
   workflow_call:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   publish:
@@ -21,4 +21,9 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Build docs
-        run: ./gradlew dokkaHtml
+        run: ./gradlew dokkaHtml --no-configuration-cache
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./docs
+          token: ${{ secrets.ACCESS_TOKEN }}
