@@ -1,4 +1,3 @@
-import com.vanniktech.maven.publish.SonatypeHost
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
@@ -10,7 +9,7 @@ plugins {
 }
 
 group = "io.github.zainulhassan815"
-version = "1.0.0"
+version = "1.0.1"
 
 kotlin {
     explicitApi()
@@ -50,7 +49,7 @@ tasks.dokkaHtml {
 }
 
 mavenPublishing {
-    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
+    publishToMavenCentral()
     signAllPublications()
     coordinates(group.toString(), "formz", version.toString())
 
