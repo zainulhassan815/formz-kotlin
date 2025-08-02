@@ -11,6 +11,14 @@ Formz-Kotlin addresses the following challenges:
 
 ## Usage Guide
 
+### Dependency
+
+To use Formz-Kotlin in your project, add the following dependency to your `build.gradle.kts` file:
+
+```kotlin
+implementation("io.github.zainulhassan815:formz:1.0.1")
+```
+
 Let's walk through creating a simple login form with email and password fields.
 
 ### 1. Define Form Inputs
